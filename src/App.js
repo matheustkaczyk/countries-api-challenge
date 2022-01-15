@@ -1,9 +1,13 @@
 import './App.scss';
 
+import Header from './components/Header';
+import Filter from './components/Filter';
+
 function App() {
   return (
     <div className="App">
-      teste
+      <Header/>
+      <Filter />
     </div>
   );
 }
