@@ -6,6 +6,7 @@ const Filter = () => {
       <input type='text' placeholder='Serch for a country...'/>
 
       <select>
+        <option hidden disabled selected value>Filter by region</option>
         <option>Africa</option>
         <option>America</option>
         <option>Asia</option>

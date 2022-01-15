@@ -4,13 +4,46 @@ $veryDarkBlueText: hsl(200, 15%, 8%);
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: $veryDarkBlue;
   color: white;
+  align-items: center;
+  margin-bottom: 2%;
+
+  img {
+    width: 2.5rem;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+
+  svg {
+    width: 2em;
+    height: auto;
+    cursor: pointer;
+  }
 }
 
 .filters-section {
   background-color: $darkBlue;
+  display: flex;
+  flex-direction: column;
+  padding: 1% 1%;
+
+  input {
+    margin-bottom: 2%;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .country-card {
@@ -21,11 +54,16 @@ header {
   background-color: $veryDarkBlueText;
   border: solid $veryDarkBlue 1px;
   border-radius: 5%;
+  width: 15em;
 
   color: white;
 
   div {
     padding: 5% 5%;
+
+    span {
+      color: rgb(131, 120, 120);
+    }
   }
 
   img {

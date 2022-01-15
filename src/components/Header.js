@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import globe from '../images/globe.svg';
+
+import AppContext from '../context/AppContext';
 
 const Header = () => {
+  const { colorMode, setColorMode } = useContext(AppContext);
+
+  const handleChange = () => {
+    setColorMode(!colorMode);
+    console.log(colorMode);
+  };
+
   return(
     <header>
-      <h3>Where in the world?</h3>
+      <div className='logo'>
+        <h3>Where in the world?</h3>
+        <img src={ globe } />
+      </div>
 
-      <h4>Dark mode</h4>
+      { colorMode ? <BsFillMoonFill onClick={ () => handleChange() }/> : <BsFillSunFill onClick={ () => handleChange() } /> }
     </header>
   )
 };
