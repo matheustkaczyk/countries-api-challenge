@@ -1,8 +1,35 @@
-$headerColor: hsl(207, 26%, 17%);
+$darkBlue: hsl(207, 26%, 17%);
+$veryDarkBlue: hsl(207, 26%, 17%);
+$veryDarkBlueText: hsl(200, 15%, 8%);
 
 header {
   display: flex;
   justify-content: space-around;
-  background-color: $headerColor;
+  background-color: $veryDarkBlue;
   color: white;
+}
+
+.filters-section {
+  background-color: $darkBlue;
+}
+
+.country-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem;
+  background-color: $veryDarkBlueText;
+  border: solid $veryDarkBlue 1px;
+  border-radius: 5%;
+
+  color: white;
+
+  div {
+    padding: 5% 5%;
+  }
+
+  img {
+    width: 100%;
+    align-self: center;
+  }
 }

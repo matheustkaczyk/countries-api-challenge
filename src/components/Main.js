@@ -13,6 +13,7 @@ const Main = () => {
     countriesFetch()
     .then((response) => response)
     .then((data) => setCountries(data.data))
+    .catch((err) => console.error(err));
   }, [])
 
   return(

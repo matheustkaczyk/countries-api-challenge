@@ -2,7 +2,7 @@ import React from 'react';
 
 const Filter = () => {
   return (
-    <section>
+    <section className='filters-section'>
       <input type='text' placeholder='Serch for a country...'/>
 
       <select>

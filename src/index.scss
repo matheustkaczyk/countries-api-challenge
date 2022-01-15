@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+$darkBlue: hsl(207, 26%, 17%);
+$veryDarkBlue: hsl(207, 26%, 17%);
+$veryDarkBlueText: hsl(200, 15%, 8%);
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins';
+  background-color: $veryDarkBlue;
 }
