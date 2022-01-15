@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import AppContext from './AppContext';
+
+import countriesFetch from '../utils/countriesFetch';
 
 const AppProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);

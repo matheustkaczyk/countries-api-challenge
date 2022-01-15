@@ -1,4 +1,8 @@
+$headerColor: hsl(207, 26%, 17%);
+
 header {
   display: flex;
   justify-content: space-around;
+  background-color: $headerColor;
+  color: white;
 }
