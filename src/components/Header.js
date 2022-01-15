@@ -10,7 +10,6 @@ const Header = () => {
 
   const handleChange = () => {
     setColorMode(!colorMode);
-    console.log(colorMode);
   };
 
   return(
