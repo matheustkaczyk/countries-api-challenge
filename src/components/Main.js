@@ -4,18 +4,20 @@ import AppContext from '../context/AppContext';
 
 import countriesFetch from '../utils/countriesFetch';
 
+import CountryCard from './CountryCard';
+
 const Main = () => {
-  const { setCountries } = useContext(AppContext);
+  const { countries, setCountries } = useContext(AppContext);
 
   useEffect(() => {
-    return () => {
-      setCountries(countriesFetch);
-    }
+    countriesFetch()
+    .then((response) => response)
+    .then((data) => setCountries(data.data))
   }, [])
-  
+
   return(
     <main>
-      main
+      { countries.length !== 0 && countries.map((country) => CountryCard(country)) }
     </main>
   )
 };
