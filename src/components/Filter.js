@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import AppContext from '../context/AppContext';
 
 const Filter = () => {
+  const { setFilterText, setFilterSelect } = useContext(AppContext);
+
+  const handleTextInput = ({ target }) => {
+    setFilterText(target.value);
+  };
+
+  const handleSelectInput = ({ target }) => {
+    setFilterSelect(target.value);
+  };
+
   return (
     <section className='filters-section'>
-      <input type='text' placeholder='Serch for a country...'/>
+      <input onChange={ (e) => handleTextInput(e) } type='text' placeholder='Serch for a country...'/>
 
-      <select>
-        <option hidden disabled selected value>Filter by region</option>
+      <select onChange={ (e) => handleSelectInput(e) }>
+        <option selected value="">Filter by region</option>
         <option>Africa</option>
         <option>America</option>
         <option>Asia</option>

@@ -7,7 +7,7 @@ import countriesFetch from '../utils/countriesFetch';
 import CountryCard from './CountryCard';
 
 const Main = () => {
-  const { countries, setCountries } = useContext(AppContext);
+  const { countries, setCountries, filterText, filterSelect } = useContext(AppContext);
 
   useEffect(() => {
     countriesFetch()
@@ -18,7 +18,10 @@ const Main = () => {
 
   return(
     <main>
-      { countries.length !== 0 && countries.map((country) => CountryCard(country)) }
+      { countries.length !== 0 && countries
+      .filter((country) => country.name.common.includes(filterText))
+      .filter((country) => country.region.includes(filterSelect))
+      .map((country) => CountryCard(country)) }
     </main>
   )
 };
