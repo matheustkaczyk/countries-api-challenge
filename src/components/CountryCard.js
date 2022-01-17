@@ -2,7 +2,7 @@ import React from 'react';
 
 const CountryCard = ({ flags, name, population, region, capital }) => {
   return (
-    <div key={ name.common } className='country-card'>
+    <div id='card' key={ name.common } className='country-card'>
       <img src={ flags.png } alt={ `${ name.common } flag` } />
       <div>
         <h4>{ name.common }</h4>

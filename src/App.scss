@@ -2,11 +2,15 @@ $darkBlue: hsl(209, 23%, 22%);
 $veryDarkBlue: hsl(207, 26%, 17%);
 $veryDarkBlueText: hsl(200, 15%, 8%);
 
+$lightDarkGray: hsl(0, 0%, 52%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
 header {
   display: flex;
   justify-content: space-evenly;
   background-color: $darkBlue;
-  color: white;
+  color: $white;
   align-items: center;
   margin-bottom: 2%;
 
@@ -79,7 +83,47 @@ main {
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
     align-self: center;
   }
+}
+
+.lightModeHeader {
+  background-color: $veryLightGray;
+  color: $veryDarkBlueText;
+}
+
+.lightModeFilters {
+  background-color: $veryLightGray;
+  color: $veryDarkBlueText;
+
+  input {
+    background-color: $veryLightGray;
+    color: $veryDarkBlueText;
+  }
+
+  select {
+    background-color: $veryLightGray;
+    color: $veryDarkBlueText;
+  }
+}
+
+.lightModeMain {
+  background-color: $veryLightGray;
+}
+
+.lightModeCountryCard {
+  background-color: $veryLightGray;
+  border: solid $veryLightGray 1px;
+  color: $veryDarkBlueText;
+
+  div {
+    span {
+      color: $veryDarkBlueText;
+    }
+  }
+}
+
+.lightModeBody {
+  background-color: $veryLightGray;
 }

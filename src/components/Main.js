@@ -14,10 +14,10 @@ const Main = () => {
     .then((response) => response)
     .then((data) => setCountries(data.data))
     .catch((err) => console.error(err));
-  }, [])
+  }, [setCountries])
 
   return(
-    <main>
+    <main id='main'>
       { countries.length !== 0 && countries
       .filter((country) => country.name.common.includes(filterText))
       .filter((country) => country.region.includes(filterSelect))
