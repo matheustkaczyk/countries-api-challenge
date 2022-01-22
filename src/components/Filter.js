@@ -15,7 +15,7 @@ const Filter = () => {
 
   return (
     <section id='filters' className='filters-section'>
-      <input onChange={ (e) => handleTextInput(e) } type='text' placeholder='Serch for a country...'/>
+      <input onChange={ (e) => handleTextInput(e) } className="input-filter" type='text' placeholder='Serch for a country...'/>
 
       <select onChange={ (e) => handleSelectInput(e) }>
         <option selected value="">Filter by region</option>
