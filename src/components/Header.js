@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-import globe from '../images/globe.svg';
 
 import AppContext from '../context/AppContext';
 
@@ -41,16 +40,13 @@ const Header = () => {
   };
 
   useEffect(() => {
-    return () => {
       darkMode ? handleColorModeRemove() : handleColorModeAdd();
-    }
   }, [darkMode]);
 
   return(
     <header id='header'>
       <div className='logo'>
         <h3>Where in the world?</h3>
-        {/* <img src={ globe } /> */}
       </div>
 
       { darkMode ? <BsFillMoonFill onClick={ () => handleChange() }/> : <BsFillSunFill onClick={ () => handleChange() } /> }
