@@ -16,12 +16,12 @@ const Header = () => {
     const header = document.getElementById('header');
     const filter = document.getElementById('filters');
     const main = document.getElementById('main');
-    const card = document.getElementById('card');
+    const cards = document.querySelectorAll('#card');
     const body = document.getElementById('body');
 
     header.classList.add('lightModeHeader');
     filter.classList.add('lightModeFilters');
-    card.classList.add('lightModeCountryCard');
+    cards.forEach((card) => card.classList.add('lightModeCountryCard'));
     main.classList.add('lightModeMain');
     body.classList.add('lightModeBody');
   };
@@ -30,12 +30,12 @@ const Header = () => {
     const element = document.getElementById('header');
     const filter = document.getElementById('filters');
     const main = document.getElementById('main');
-    const card = document.getElementById('card');
+    const cards = document.querySelectorAll('#card');
     const body = document.getElementById('body');
 
     element.classList.remove('lightModeHeader');
     filter.classList.remove('lightModeFilters')
-    card.classList.remove('lightModeCountryCard');
+    cards.forEach(card => card.classList.remove('lightModeCountryCard'));
     main.classList.remove('lightModeMain');
     body.classList.remove('lightModeBody')
   };
