@@ -2,17 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
+import AppDetails from './pages/AppDetails';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import AppProvider from './context/AppProvider';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <AppProvider>
+        <Routes>
+          <Route path="/" element={ <App /> } />
+          <Route path=":name" element={ <AppDetails /> } />
+        </Routes>
+      </AppProvider>
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
