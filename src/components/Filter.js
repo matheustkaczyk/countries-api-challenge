@@ -18,7 +18,7 @@ const Filter = () => {
       <input onChange={ (e) => handleTextInput(e) } className="input-filter" type='text' placeholder='Serch for a country...'/>
 
       <select onChange={ (e) => handleSelectInput(e) }>
-        <option selected value="">Filter by region</option>
+        <option defaultValue value="">Filter by region</option>
         <option>Africa</option>
         <option>America</option>
         <option>Asia</option>

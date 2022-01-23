@@ -35,7 +35,7 @@ header {
 }
 
 .filters-section {
-  background-color: $darkBlue;
+  // background-color: $darkBlue;
   display: flex;
   flex-direction: column;
   padding: 4% 4%;
@@ -133,6 +133,26 @@ main {
 }
 
 @media (min-width: 768px) {
+  header {
+    .logo {
+      align-items: center;
+      font-size: larger;
+    }
+  }
+
   .filters-section {
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+      border-radius: unset;
+      padding: 2% 2%;
+      width: 30%;
+    }
+
+    select {
+      width: 20%;
+      height: 20%;
+    }
   }
 }
