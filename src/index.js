@@ -14,7 +14,7 @@ ReactDOM.render(
     <React.StrictMode>
       <AppProvider>
         <Routes>
-          <Route path="/" element={ <App /> } />
+          <Route exact path="/" element={ <App /> } />
           <Route path=":name" element={ <AppDetails /> } />
         </Routes>
       </AppProvider>
