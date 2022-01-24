@@ -132,6 +132,26 @@ main {
   background-color: $veryLightGray;
 }
 
+.country-details {
+
+  button {
+    margin: 10% 10%;
+  }
+
+  .country-card {
+    padding: 10% 10%;
+  }
+
+  .country-detail-info {
+
+  }
+
+  img {
+    width: 80vw;
+    height: auto;
+  }
+}
+
 @media (min-width: 768px) {
   header {
     .logo {
