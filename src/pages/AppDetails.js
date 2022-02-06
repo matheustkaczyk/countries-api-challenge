@@ -34,7 +34,7 @@ const AppDetails = () => {
   return (
     countryDetails && 
     <div className="country-details">
-      <button onClick={ () => handleButton() } type="button">Back</button>
+      <button className="detail-btn" onClick={ () => handleButton() } type="button">Back</button>
       { countryDetails.slice(0, 1).map((country) => CountryDetail(country)) }
     </div>
   );

@@ -136,9 +136,27 @@ main {
 }
 
 .country-details {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+}
 
-  button {
-    margin: 10% 10%;
+.detail-btn {
+  margin: 5% 5%;
+  width: 20%;
+}
+
+.country-card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $white;
+
+  img {
+    width: 80vw;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .country-card {
@@ -146,12 +164,8 @@ main {
   }
 
   .country-detail-info {
-
-  }
-
-  img {
-    width: 80vw;
-    height: auto;
+    display: flex;
+    flex-direction: column;
   }
 }
 

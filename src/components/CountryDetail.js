@@ -2,7 +2,7 @@ import React from 'react';
 
 const CountryDetail = (country) => {
   return (
-    <div className="country-card" key={ country.name }>
+    <div className="country-card-detail" key={ country.name }>
         <img src={ country.flags.svg } alt="country flag" />
         <div className="country-detail-info">
           <div>
@@ -29,7 +29,7 @@ const CountryDetail = (country) => {
             </span>
           </div>
         </div>
-      </div>
+    </div>
   );
 };
 
