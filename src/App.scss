@@ -150,13 +150,23 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: $white;
+
+  color: $lightDarkGray;
+
+  width: 50%;
+  margin: 0 auto;
+
+  div {
+    span {
+      color: $white;
+    }
+  }
 
   img {
-    width: 80vw;
-    height: auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 100%;
+    height: 80%;
+    // padding-left: 5%;
+    // padding-right: 5%;
   }
 
   .country-card {
